@@ -223,7 +223,7 @@ async function updateAll(){
             dresses[dressIndex].signaled = true;
         }
 
-        // await blastUpdate(message);
+        await blastUpdate(message, [SEND_TO_ME]);
         await writeDressArray(DRESS_PATH, dresses);
     } else {
         console.log("No new dresses to post");
@@ -231,12 +231,12 @@ async function updateAll(){
 
 }
 
-
 const MIN_DELAY = 1000 * 60 * 1;
 const MAX_DELAY = 1000 * 60 * 5;
 async function run() {
     while (true) {  // This loop will ensure that your function runs indefinitely
         try {
+            console.log("Updating Dresses...");
             await updateAll();
         } catch (error) {
             console.log(error);
