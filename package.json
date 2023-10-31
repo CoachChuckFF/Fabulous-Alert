@@ -1,0 +1,19 @@
+{
+  "name": "dresses",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "scripts": {
+    "wipe": "rm dresses.json && bun index.ts",
+    "run": "bun index.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "node-html-parser": "^6.1.11",
+    "twilio": "^4.19.0"
+  }
+}
