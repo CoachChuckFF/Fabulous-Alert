@@ -231,4 +231,18 @@ async function updateAll(){
 
 }
 
-updateAll();
+
+const MIN_DELAY = 1000 * 60 * 1;
+const MAX_DELAY = 1000 * 60 * 5;
+async function run() {
+    while (true) {  // This loop will ensure that your function runs indefinitely
+        try {
+            await updateAll();
+        } catch (error) {
+            console.log(error);
+        }
+        await sleepRandom(MIN_DELAY, MAX_DELAY);
+    }
+}
+
+run();
