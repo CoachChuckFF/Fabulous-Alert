@@ -223,7 +223,7 @@ async function updateAll(){
             dresses[dressIndex].signaled = true;
         }
 
-        await blastUpdate(message, [SEND_TO_ME]);
+        await blastUpdate(message);
         await writeDressArray(DRESS_PATH, dresses);
     } else {
         console.log("No new dresses to post");
