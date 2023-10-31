@@ -3,6 +3,7 @@
 # Logs
 
 .env
+dresses.json
 
 logs
 _.log

@@ -241,6 +241,7 @@ async function run() {
         } catch (error) {
             console.log(error);
         }
+
         await sleepRandom(MIN_DELAY, MAX_DELAY);
     }
 }
